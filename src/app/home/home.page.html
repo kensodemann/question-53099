@@ -12,6 +12,9 @@
   </ion-header>
 
   <div id="container">
-    <ion-range [pin]="true" [pinFormatter]="pinFormatter"></ion-range>
+    <ion-label>{{fmtAmount}}</ion-label>
+    <ion-range [pin]="true" [pinFormatter]="pinFormatter" [(ngModel)]="amount"></ion-range>
+    <ion-button (click)="amount = 10">Ten</ion-button>
+    <ion-button (click)="amount = 90">Ninety</ion-button>
   </div>
 </ion-content>
